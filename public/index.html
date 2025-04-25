@@ -6,8 +6,9 @@
     <title>나의 til</title>
     <link rel="stylesheet" href="css/common.css" />
   </head>
+
   <body>
-    <!-- 전체 레이아웃 -->
+    <!-- 전체 레이아웃  -->
     <div class="wrap">
       <!-- 상단 -->
       <header class="header">
@@ -24,9 +25,17 @@
               <!-- 제품검색 -->
               <div class="search">
                 <!-- 제품 검색 API 연동 -->
-                <form class="search_from">
-                  <input type="text" placeholder="제품을 검색해 주세요." />
-                  <input type="submit" value="검색" />
+                <form class="search_form">
+                  <input
+                    class="search_form_word"
+                    type="text"
+                    placeholder="제품을 검색해 주세요."
+                  />
+                  <input
+                    class="search_form_button"
+                    type="submit"
+                    value="검색"
+                  />
                 </form>
               </div>
             </div>
@@ -46,31 +55,32 @@
                 <li><a href="#">티켓</a></li>
               </ul>
             </div>
-            <div class="header_bottom_eventmenu">이벤트메뉴</div>
-            <ul class="cupon">
-              <li>
-                <a href="#">
-                  해외여행쿠폰
-                  <img
-                    src="images/badge_hot.svg"
-                    alt="해외여행쿠폰"
-                    title="해외여행쿠폰"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#"
-                  >국내여행쿠폰
-                  <img
-                    src="images/badge_hot.svg"
-                    alt="해외여행쿠폰"
-                    title="해외여행쿠폰"
-                  />
-                </a>
-              </li>
-              <li><a href="#">여행혜택존</a></li>
-              <li><a href="#">여행준비</a></li>
-            </ul>
+            <div class="header_bottom_eventmenu">
+              <ul class="cupon">
+                <li>
+                  <a href="#">
+                    해외여행쿠폰
+                    <img
+                      src="images/badge_hot.svg"
+                      alt="해외여행쿠폰"
+                      title="해외여행쿠폰"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    국내여행쿠폰
+                    <img
+                      src="images/badge_hot.svg"
+                      alt="국내여행쿠폰"
+                      title="국내여행쿠폰"
+                    />
+                  </a>
+                </li>
+                <li><a href="#">여행혜택존</a></li>
+                <li><a href="#">여행준비</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </header>
@@ -100,10 +110,10 @@
           <div class="tour">
             <div class="section_top">
               <h2 class="section_title">투어 특가</h2>
-              <spam>마감임박! 금주의 특가 여행 추천</spam>
+              <span class="section_desc">마감임박! 금주의 특가 여행 추천</span>
             </div>
             <div class="section_list">
-              <!-- Start 목록영역 -->
+              <!--Start 목록영역 -->
               <div class="section_category">
                 <ul class="section_category_bts">
                   <li><button>마감임박</button></li>
@@ -114,51 +124,51 @@
                 </ul>
               </div>
               <div class="section_slide">
-                <!-- Start 추후 JSON 데이터 연동으로 변경 예정 -->
+                <!--Start 추후 JSON 데이터 연동으로 변경 예정 -->
                 <div class="item">
                   <a href="#">
                     <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
-                    <spam>나트랑</spam>
-                    <spam>[10%] 아동 등반 가족여행 강력 추천</spam>
+                    <span>나트랑</span>
+                    <span>[10%쿠폰] 아동 동반 가족여행 강력 추천</span>
                     <p>
                       방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성
                       윈덤 좀티엔 파타야,마사지 2시간,핵심일정 포함
                     </p>
-                    <spam><b>109,000</b>원~</spam>
+                    <span><b>109,000</b>원~</span>
                   </a>
                 </div>
                 <div class="item">
                   <a href="#">
                     <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
-                    <spam>나트랑</spam>
-                    <spam>[10%] 아동 등반 가족여행 강력 추천</spam>
+                    <span>나트랑</span>
+                    <span>[10%쿠폰] 아동 동반 가족여행 강력 추천</span>
                     <p>
                       방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성
                       윈덤 좀티엔 파타야,마사지 2시간,핵심일정 포함
                     </p>
-                    <spam><b>109,000</b>원~</spam>
+                    <span><b>109,000</b>원~</span>
                   </a>
                 </div>
                 <div class="item">
                   <a href="#">
                     <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
-                    <spam>나트랑</spam>
-                    <spam>[10%] 아동 등반 가족여행 강력 추천</spam>
+                    <span>나트랑</span>
+                    <span>[10%쿠폰] 아동 동반 가족여행 강력 추천</span>
                     <p>
                       방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성
                       윈덤 좀티엔 파타야,마사지 2시간,핵심일정 포함
                     </p>
-                    <spam><b>109,000</b>원~</spam>
+                    <span><b>109,000</b>원~</span>
                   </a>
                 </div>
 
-                <!-- End 추후 JSON 데이터 연동으로 변경 예정 -->
+                <!--End 추후 JSON 데이터 연동으로 변경 예정 -->
               </div>
-              <!-- End 목록영역 -->
+              <!--End 목록영역 -->
             </div>
             <div class="section_bts">
               <a href="#">
-                투어 바로가기
+                투어 홈 바로가기
                 <img
                   src="images/icon_linkArrow.svg"
                   alt="투어 홈 바로가기"
