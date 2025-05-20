@@ -88,15 +88,15 @@ header.addEventListener("click", function () {
 ### 4. 활용빈도가 높은 `윈도우 이벤트`
 
 - `load` :
-- `DOMContentloaded` :
-- `resize` : 웹브라우저 너비, 높이 변경시 발생
+- `DOMContentLoaded` :
+- `resize`: 웹브라우저 너비, 높이 변경시 발생
 - `scroll` : 웹브라우저에 스크롤이 일어나면 발생
 
 ### 5. 활용빈도가 높은 `마우스 이벤트`
 
 - `click` : 마우스 클릭(왼쪽)
 - `mouseenter` : 마우스 커서가 요소에 걸쳐지면
-- `mouseleave` : 마우스 커서가 오소에서 벗어나면
+- `mouseleave` : 마우스 커사가 요소에서 벗어나면
 
 ### 6. 활용빈도가 높은 `키보드 이벤트`
 
@@ -105,3 +105,55 @@ header.addEventListener("click", function () {
 - `keypress` : 키보드에서 키 누르고 있으면 이벤트
 
 ### 7. 활용빈도가 높은 Form 관련 이벤트 (추후 정리)
+
+## CSS 제어법
+
+### 1. inline 형태로 적용하기 (가끔 활용함)
+
+- `대상.style.css속성 = "값"`
+
+```js
+// DOM 만 완성화면 됩니다. 기준으로 코드를 진행함.
+// DOM 은 html 태그 구조를 말한다.(Document Object Model) : 객체
+// 아래 문장은 html 이 완성되어졌다면 실행하자.
+window.addEventListener("DOMContentLoaded", function () {
+  // 아래 구문은 heder 변수를 만들고 html (document) 에서 css 선택자로 값을 셋팅
+  const header = this.document.querySelector(".header");
+  const logo = this.document.querySelector(".logo");
+  const search = this.document.querySelector(".search");
+  const member = this.document.querySelector(".header_top_right");
+  const eventMenu = this.document.querySelector(".header_bottom_eventmenu");
+
+  // 윈도우에 스크롤(scroll 이벤트)이 일어나면 기능을 작동하겠다.
+  this.window.addEventListener("scroll", function () {
+    // 스크롤이 되었을 때 스크롤바의 Y 축의 상단 픽셀위치값
+    const scrollY = window.scrollY;
+
+    // headerTop 영역의 높이값을 px 로 알고 싶다.
+    const headerTopH = this.document.querySelector(".header_top");
+    console.log(headerTopH.offsetHeight); //  50px 출력
+
+    // 만약 50 보다 작으면 전체 를 보이고, 그렇지 않으면 일부분을 숨긴다.
+    if (scrollY <= headerTopH.offsetHeight) {
+      // console.log("모두 보여라");
+      logo.style.display = "block";
+      eventMenu.style.display = "block";
+    } else {
+      // console.log("일부만 보여라");
+      // 로고를 css 로 제어하겠다.
+      logo.style.display = "none";
+      eventMenu.style.display = "none";
+      search.style.position = "absolute";
+      search.style.left = "350px";
+      search.style.top = "48px";
+    }
+  });
+});
+```
+
+### 2. css 클래스 활용하기 (적극 활용함)
+
+- `대상.classlist.add("클래스명")`
+- `대상.classlist.remove("클래스명")`
+- `대상.classlist.toggle("클래스명")`
+- `대상.classlist.contain("클래스명")`
