@@ -3,6 +3,8 @@ window.addEventListener("load", function () {
   const apiUrl = "http://127.0.0.1:5500/public/api/tour.json";
   // 현재 출력한 카테고리
   let cateFocusIndex = 0;
+  // 카테고리 button 태그 DOM 보관
+  let cateButtonArr = [];
   // 카테고리 글자 배열
   let cateNameArr = [];
   // 카테고리별 목록 배열
@@ -60,14 +62,16 @@ window.addEventListener("load", function () {
     });
 
     cateBts.innerHTML = html;
+
+    // 버튼 태그 모음
+    cateButtonArr = document.querySelectorAll(
+      ".section_category_bts > li > button"
+    );
   }
 
   // 실시간으로 생성된 버튼에 이벤트 연결하기
   function addBtsEvent() {
-    const bts = document.querySelectorAll(
-      ".section_category_bts > li > button"
-    );
-    bts.forEach(function (item, index) {
+    cateButtonArr.forEach(function (item, index) {
       item.addEventListener("click", function () {
         // 동일한 버튼 클릭시 작동 방지
         if (cateFocusIndex === index) {
@@ -80,23 +84,17 @@ window.addEventListener("load", function () {
     });
   }
 
-  // 카테고리 현재 인덱스 변경하기
+  // 포커스 모두 제거하기
   function removeFocusAll() {
-    const bts = document.querySelectorAll(
-      ".section_category_bts > li > button"
-    );
-    bts.forEach(function (item) {
+    cateButtonArr.forEach(function (item) {
       item.classList.remove("cate_focus");
     });
   }
 
   // 카테고리 버튼에 현재 포커스 표현하기
   function activeCateFocus() {
-    const bts = document.querySelectorAll(
-      ".section_category_bts > li > button"
-    );
-    bts[cateFocusIndex].classList.add("cate_focus");
-    console.log(bts);
+    cateButtonArr[cateFocusIndex].classList.add("cate_focus");
+    // console.log(bts);
   }
 
   // 함수 호출
