@@ -157,3 +157,4 @@ initial-scale1.0"
 - layout 클래스를 작업
 
 - header 영역 css 작업
+- header 와 반응형 header 를 분리해서 만들면 편하다.

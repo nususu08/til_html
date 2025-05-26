@@ -50,19 +50,16 @@ body {
 @media all and (max-width: 1280px) {
   .layout {
     max-width: 1024px;
-    background-color: skyblue;
   }
 }
 @media all and (max-width: 1024px) {
   .layout {
     max-width: 760px;
-    background-color: hotpink;
   }
 }
 @media all and (max-width: 760px) {
   .layout {
     max-width: 100%;
-    background-color: yellowgreen;
   }
 }
 

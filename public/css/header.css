@@ -184,14 +184,34 @@ main {
 /* 모바일 헤더 */
 .m_header {
   position: fixed;
+
   top: 0;
   left: 0;
   z-index: 999;
   display: none;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 54px;
+  padding: 0 10px;
   background-position-x: #fff;
   border-bottom: 1px solid #ebebeb;
+}
+
+.m_header_menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.m_header_menu a {
+  font-size: 22px;
+  font-weight: 400;
+}
+.m_header_search {
+  display: flex;
+  align-items: center;
+}
+.m_header_search a {
 }
 
 /* 반응형 작업 */
@@ -203,6 +223,8 @@ main {
     display: none;
   }
   .m_header {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
   }
 }
